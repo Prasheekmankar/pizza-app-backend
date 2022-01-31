@@ -26,8 +26,8 @@ async function genPassword(password) {
 
 async function getPizza(data) {
   return await client
-    .db("pizza_data")
-    .collection("pizzalist")
+    .db("bike_data")
+    .collection("bikelist")
     .find(data)
     .toArray();
 }

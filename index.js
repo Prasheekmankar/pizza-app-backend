@@ -3,7 +3,7 @@ import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 import cors from "cors";
 import { userRouter } from "./routes/user.js";
-import { pizzalistRouter } from "./routes/pizzalist.js";
+import { bikelistRouter } from "./routes/bikelist.js";
 import { adminRouter } from "./routes/admin.js";
 
 dotenv.config();
@@ -34,7 +34,9 @@ app.get("/", (request, response) => {
 app.use("/user", userRouter);
 app.use("/admin", adminRouter);
 
-app.use("/pizzalist", pizzalistRouter);
+app.use("/bikelist", bikelistRouter);
 
 
-app.listen(PORT, () => console.log("App is started", PORT));
+app.listen(process.env.PORT || 7000, () =>
+    console.log(`Listening on port 7000...`)
+  );
