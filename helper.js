@@ -24,7 +24,7 @@ async function genPassword(password) {
   return hashedPassword;
 }
 
-async function getPizza(data) {
+async function getBike(data) {
   return await client
     .db("bike_data")
     .collection("bikelist")
@@ -36,7 +36,7 @@ export {
   createUser,
   getUserByEmail,
   genPassword,
-  getPizza,
+  getBike,
   createAdmin,
   getAdminByEmail,
 };

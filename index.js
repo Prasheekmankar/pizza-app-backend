@@ -28,7 +28,7 @@ async function createConnection() {
 export const client = await createConnection();
 
 app.get("/", (request, response) => {
-  response.send("pizza mania");
+  response.send("bike rental portal");
 });
 
 app.use("/user", userRouter);
